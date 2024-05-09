@@ -58,6 +58,10 @@ export class UsersService {
   }
 
   remove(id: number) {
-    return `This action removes a #${id} user`;
+    this.findOne(id);
+
+    const userIndex = this.users.findIndex((user) => user.id ===id);
+
+    this.users.splice(userIndex, 1);
   }
 }
