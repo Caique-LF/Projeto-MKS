@@ -25,7 +25,15 @@ export class UsersService {
   }
 
   findAll() {
-    return `This action returns all users`;
+
+    let userArray = [];
+
+    for (let index = 0; index < this.users.length; index++) {
+      let {password, ...user}= this.users[index]
+      
+      userArray.push(user)
+    }
+    return userArray;
   }
 
   findOne(id: number) {
