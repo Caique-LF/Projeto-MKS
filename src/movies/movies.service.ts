@@ -22,7 +22,7 @@ export class MoviesService {
 
     this.movies.push(newMovie);
 
-    return newMovie;
+    return newMovie
 
 
   }
