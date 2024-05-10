@@ -54,6 +54,12 @@ export class MoviesService {
   }
 
   remove(id: number) {
-    return `This action removes a #${id} movie`;
+     this.findOne(id);
+
+     const movieIndex = this.movies.findIndex((movie)=> movie.id === id);
+
+     this.movies.splice(movieIndex, 1);
+
+      return ;
   }
 }
