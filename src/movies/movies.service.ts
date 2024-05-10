@@ -28,7 +28,7 @@ export class MoviesService {
   }
 
   findAll() {
-    return `This action returns all movies`;
+    return this.movies
   }
 
   findOne(id: number) {
