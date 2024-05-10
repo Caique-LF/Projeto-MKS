@@ -42,7 +42,15 @@ export class MoviesService {
   }
 
   update(id: number, updateMovieDto: UpdateMovieDto) {
-    return `This action updates a #${id} movie`;
+    const movie = this.findOne(id);
+
+     movie.name = updateMovieDto.name;
+     movie.category = updateMovieDto.category;
+     movie.description = updateMovieDto.description;
+     movie.reviews = updateMovieDto.reviews;
+     movie.releaseYear = updateMovieDto.releaseYear;
+     
+    return ;
   }
 
   remove(id: number) {
